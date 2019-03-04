@@ -1,0 +1,4 @@
+mysql安装：https://www.cnblogs.com/daemon-/p/9009360.html
+apllo包下载：https://github.com/ctripcorp/apollo
+             https://github.com/nobodyiam/apollo-build-scripts
+apllo安装：https://blog.csdn.net/m0_37050600/article/details/79494568

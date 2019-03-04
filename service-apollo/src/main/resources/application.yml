@@ -1,0 +1,9 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: service-aopllo
+eureka:
+  client:
+    service-url:
+      defaultZone: http://192.168.123.131:8080/eureka
