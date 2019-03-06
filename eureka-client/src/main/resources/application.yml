@@ -10,7 +10,6 @@ eureka:
     serviceUrl:
       defaultZone: http://localhost:8001/eureka/
 
-
 management:
   endpoints:
     web:
@@ -19,3 +18,5 @@ management:
       cors:
         allowed-origins: "*"
         allowed-methods: "*"
+swagger:
+  base-package: com.zyy

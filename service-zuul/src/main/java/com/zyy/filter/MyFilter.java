@@ -59,7 +59,7 @@ public class MyFilter extends ZuulFilter {
         RequestContext context=RequestContext.getCurrentContext();
         HttpServletRequest request = context.getRequest();
         log.info(String.format("%s >>> %s", request.getMethod(), request.getRequestURL().toString()));
-        String token = request.getParameter("token");
+        /*String token = request.getParameter("token");
         if(token == null) {
             log.warn("token is empty");
             context.setSendZuulResponse(false);
@@ -70,7 +70,7 @@ public class MyFilter extends ZuulFilter {
                 e.printStackTrace();
             }
             return null;
-        }
+        }*/
         log.info("ok");
         return null;
     }

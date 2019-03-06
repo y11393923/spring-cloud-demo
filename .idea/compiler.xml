@@ -10,7 +10,9 @@
         <module name="eurekaserver" />
         <module name="serviceapollo" />
         <module name="servicefeign" />
+        <module name="servicekafka" />
         <module name="serviceribbon" />
+        <module name="serviceswagger" />
         <module name="serviceturbine" />
         <module name="servicezuul" />
       </profile>
