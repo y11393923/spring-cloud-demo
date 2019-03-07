@@ -1,0 +1,47 @@
+server:
+  port: 9002
+spring:
+  application:
+    name: consumer
+    ##kafka 消费者配置
+  cloud:
+    stream:
+      #该参数指定了当前消费者的总实例数量
+      instance-count: 1
+      #该参数设置了当前实例的索引号，从 0 开始，最大值为 spring.cloud.stream.instance-count 参数 - 1
+      instance-index: 0
+      default-binder: kafka
+      kafka:
+        binder:
+          brokers: 192.168.123.131:9092
+          zk-nodes: 192.168.123.131:2181
+          auto-add-partitions: true
+          auto-create-topics: true
+          min-partition-count: 1
+      bindings:
+        #管道名称
+        my_msg:
+          #分组用于集群环境防止多次消费
+          group: stream
+          consumer:
+            #是否在处理消息完成后自动提交偏移量
+            autoCommitOffset: false
+            concurrency: 1
+            ###开启分区消费
+            partitioned: false
+
+    ##rabbitmq 消费者配置
+#  rabbitmq:
+#    host: 192.168.123.131
+#    port: 5672
+#    username: admin
+#    password: admin
+#  #指定绑定器rabbit，kafka
+#  cloud:
+#    stream:
+#      default-binder: rabbit
+#      bindings:
+#        my_msg:  ###指定 管道名称
+#        #指定该应用实例属于 stream 消费组，用于集群时防止多次消费
+#          group: stream
+

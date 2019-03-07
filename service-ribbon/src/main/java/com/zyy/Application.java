@@ -1,5 +1,6 @@
 package com.zyy;
 
+import com.spring4all.swagger.EnableSwagger2Doc;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
@@ -18,6 +19,7 @@ import org.springframework.web.client.RestTemplate;
 @EnableEurekaClient
 @EnableDiscoveryClient  //向服务中心注册；并且向程序的ioc注入一个bean: restTemplate;
 @EnableHystrix
+@EnableSwagger2Doc
 public class Application {
     public static void main(String[] args) {
         SpringApplication.run(Application.class,args);

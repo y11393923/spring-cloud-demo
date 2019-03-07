@@ -16,8 +16,8 @@
         <module>service-zuul</module>
         <module>service-turbine</module>
         <module>service-apollo</module>
-        <module>service-kafka</module>
         <module>service-swagger</module>
+        <module>service-stream</module>
     </modules>
 
     <parent>

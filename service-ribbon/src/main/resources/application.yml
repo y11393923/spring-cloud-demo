@@ -7,3 +7,5 @@ server:
 spring:
   application:
     name: service-ribbon
+swagger:
+  base-package: com.zyy.controller

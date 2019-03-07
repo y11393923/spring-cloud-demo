@@ -1,0 +1,23 @@
+server:
+  port: 9001
+spring:
+  application:
+    name: producer
+    ##rabbitmq 生产者配置
+#  rabbitmq:
+#    host: 192.168.123.131
+#    port: 5672
+#    username: admin
+#    password: admin
+  cloud:
+    stream:
+      #指定绑定器rabbit，kafka
+      default-binder: kafka
+      ##kafka 生产者配置
+      kafka:
+        binder:
+          brokers: 192.168.123.131:9092
+          zk-nodes: 192.168.123.131:2181
+          min-partition-count: 1
+          auto-create-topics: true  #自动创建新的主题
+          auto-add-partitions: true #根据需要创建添加新分区
