@@ -18,6 +18,7 @@
         <module>service-apollo</module>
         <module>service-swagger</module>
         <module>service-stream</module>
+        <module>service-task</module>
     </modules>
 
     <parent>
