@@ -1,0 +1,29 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8001/eureka/
+server:
+  port: 8082
+spring:
+  application:
+    name: oauth-hi
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/spring-cloud-auth2-db?useUnicode=true&characterEncoding=utf8&characterSetResults=utf8
+    username: root
+    password: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+# security.oauth2.resource.user-info-uri用于获取当前token的用户信息
+security:
+  oauth2:
+    resource:
+      user-info-uri: http://localhost:8081/users/current
+    client:
+      id: client_2
+      client-secret: 123456
+      access-token-uri: http://localhost:8081/oauth/token
+      grant-type: client_credentials,password
+      scope: server
